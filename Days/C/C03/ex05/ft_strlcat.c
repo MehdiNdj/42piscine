@@ -6,11 +6,9 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:39:11 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/20 03:39:17 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/25 04:47:34 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -37,9 +35,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (0);
 	if (size != 0)
 	{	
-		while (dest[i] != '\0' && i < size)
+		while (dest[i] != '\0' && i < size - 1)
 			i++;
-		while (src[j] != '\0' && i < size)
+		while (src[j] != '\0' && i < size - 1)
 		{
 			dest[i] = src[j];
 			i++;

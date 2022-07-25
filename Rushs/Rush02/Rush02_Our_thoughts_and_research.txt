@@ -1,0 +1,18 @@
+///Rush 02///
+
+We were searching separately any resources that could help us make this project, and here is what we thought we would've used/done to make it and make it functional.
+
+We understood the general idea that we had to ask the user to input a number as an argument and that our program should use the dictionary provided to find this number and show it in the standard output as a wrtten number. If there are two arguments, it would add the first one as a new reference in this dictionary to convert the second argument.
+
+Since the user needs to write one or two arguments, the main should use argc and argv, and read the dictionary file to find the matching numbers and/or mixing different ones to form the final number, for example, if the number is 42, it should take "forty" and "two" separately and concatenate them to form "forty two", and this would apply to any other possible numbers.
+This, indeed, needs to use strcat function>
+
+In general, the dictionary should contain a lot of different combinations and should allow us to form any number we can write as arguments. The more this program is used, the more it will store new combinations of numbers.
+
+It should be able to return errors in case there are no arguments or if these ones aren't unsigned ints.
+It should also ignore any empty line, space, and work whatever the order of the numbers stored in it.
+
+The different functions asked to use in this program do exactly what their names say, for instance, "open, read, close" functions allow the program to open a file (in our case a dictionary), read what's in it and close it once it finds what it needs.
+
+The "write" function will allow the program to show the different standard input/outputs and error outputs in the terminal.
+The free and malloc functions allow the program to free some "dynamic memory" in the heap accordingly, depending on the length of the different numbers and strings of numbers it needs to show in the output. This should indeed, use the strlen function to only the memory it needs in order to make the program optimized and don't use unnecessary memory.

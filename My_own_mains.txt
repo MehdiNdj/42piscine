@@ -353,10 +353,10 @@ int main()
 
 int     main(int argc, char **argv)
 {
-        int     ret = ft_strcmp(argv[1], argv[2]);
-
         if (argc != 3)
                 return(0);
+        int     ret = ft_strcmp(argv[1], argv[2]);
+
         if (ret > 0)
                 printf("s1 est plus grand que s2");
         else if (ret < 0)
@@ -370,12 +370,13 @@ int     main(int argc, char **argv)
 
 int     main(int argc, char **argv)
 {
-        unsigned int    n = 2;
-
-        int     ret = ft_strncmp(argv[1], argv[2], n);
+        unsigned int    n = 4;
 
         if (argc != 3)
                 return(0);
+
+        int     ret = ft_strncmp(argv[1], argv[2], n);
+        
         if (ret > 0)
                 printf("s1 est plus grand que s2");
         else if (ret < 0)
@@ -389,10 +390,10 @@ int     main(int argc, char **argv)
 
 int     main(int argc, char **argv)
 {
-        char     *ret = ft_strcat(argv[1], argv[2]);
-
         if (argc != 3)
                 return(0);
+        char     *ret = ft_strcat(argv[1], argv[2]);
+
         printf("Destination is now %s", ret);
         return (0);
 }
@@ -401,12 +402,61 @@ int     main(int argc, char **argv)
 
 int     main(int argc, char **argv)
 {
+        if (argc != 3)
+                return(0);
         unsigned int    n = 4;
         char    *ret = ft_strncat(argv[1], argv[2], n);
 
-        if (argc != 3)
-                return(0);
         printf("Destination is now %s", ret);
+        return (0);
+}
+
+//First code of ex04
+
+char    *ft_strstr(char *str, char *to_find)
+{
+        int     i;
+
+        if (*str == 0 || *to_find == 0)
+                return ("");
+        while (*str)
+        {
+                i = 0;
+                while (str[i] == to_find[i] && to_find[i] != '\0'
+                        && str[i] != '\0')
+                {
+                        i++;
+                }
+                if (to_find[i] == '\0')
+                {
+                        break ;
+                }
+                str++;
+        }
+        return (str);
+}
+
+//Second code of ex04
+
+char    *ft_strstr(char *str, char *to_find)
+{
+        int     i;
+        int     j;
+
+        i = 0;
+        if (to_find[0] == '\0')
+                return (str);
+        while (str[i] != '\0')
+        {
+                j = 0;
+                while (str[i + j] == to_find[j] && str[i + j] != '\0')
+                {
+                        if (to_find[j + 1] == '\0')
+                                return (&str[i]);
+                        j++;
+                }
+                i++;
+        }
         return (0);
 }
 
@@ -417,6 +467,18 @@ int     main(void)
         char *ret = ft_strstr("Ceci est une string", "une");
 
         printf("%s", ret);
+}
+
+//To test the code of ex05
+
+int     main(int argc, char **argv)
+{
+        if (argc != 3)
+                return(0);
+        unsigned int     ret = ft_strlcat(argv[1], argv[2], 3);
+
+        printf("Destination size would've been %d", ret);
+        return (0);
 }
 
 //////////////////////////////////////////////////C04
@@ -432,5 +494,7 @@ int     main(void)
 }
 
 //To test the code of ex02
+
+//////////////////////////////////////////////////C06
 
 
