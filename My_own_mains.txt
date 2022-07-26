@@ -495,6 +495,21 @@ int     main(void)
 
 //To test the code of ex02
 
+//////////////////////////////////////////////////C05
+
+//To test the code of ex00
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int     main(int argc, char **argv)
+{
+        if (argc != 2)
+                return (0);
+        int     ret = ft_iterative_factorial(atoi(argv[1]));
+        printf("%d\n", ret);
+}
+
 //////////////////////////////////////////////////C06
 
 
