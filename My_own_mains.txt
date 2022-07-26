@@ -510,6 +510,36 @@ int     main(int argc, char **argv)
         printf("%d\n", ret);
 }
 
+//To test the code of ex01
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int     main(int argc, char **argv)
+{
+        if (argc != 2)
+                return (0);
+        int     ret = ft_recursive_factorial(atoi(argv[1]));
+        printf("%d\n", ret);
+}
+
+//To test the code of ex02
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int     main(int argc, char **argv)
+{
+        if (argc != 3)
+                return (0);
+        int     ret = ft_iterative_power(atoi(argv[1]), atoi(argv[2]));
+        printf("%d\n", ret);
+}
+
+//To test the code of ex03
+
+
+
 //////////////////////////////////////////////////C06
 
 
