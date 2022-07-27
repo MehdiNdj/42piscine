@@ -6,13 +6,11 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:23:34 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/27 00:38:54 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/28 00:33:21 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_fibonacci(int index)
+int	ft_fibonacci(int index)
 {
 	if (index < 0)
 		return (-1);

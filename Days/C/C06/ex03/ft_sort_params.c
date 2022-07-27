@@ -6,18 +6,18 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:12:15 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/23 22:45:51 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/28 00:55:57 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 void	ft_putstr(char *str)
 {
 	int	i;
+
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
 		i++;
@@ -60,8 +60,6 @@ void	ft_sort(int argc, char **argv)
 		i++;
 	}
 }
-
-
 
 int	main(int argc, char **argv)
 {

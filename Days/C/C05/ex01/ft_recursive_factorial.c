@@ -6,27 +6,16 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 03:11:36 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/26 04:05:07 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/28 00:38:04 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
-		return(0);
-	else if (nb <= 1)
+		return (0);
+	else if (nb == 0)
 		return (1);
 	else
 		return (nb * ft_recursive_factorial(nb - 1));
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int     main(int argc, char **argv)
-{
-        if (argc != 2)
-                return (0);
-        int     ret = ft_recursive_factorial(atoi(argv[1]));
-        printf("%d\n", ret);
 }
