@@ -495,6 +495,26 @@ int     main(void)
 
 //To test the code of ex02
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int     main(int argc, char **argv)
+{
+        if (argc != 2)
+                return (0);
+        char     ret = ft_putnbr(argv[1]);
+        printf("%s\n", ret);
+}
+
+//To test the code of ex03
+
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%d", ft_atoi(" ---+--+1234ab567"));
+}
+
 //////////////////////////////////////////////////C05
 
 //To test the code of ex00
@@ -538,7 +558,27 @@ int     main(int argc, char **argv)
 
 //To test the code of ex03
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int     main(int argc, char **argv)
+{
+        if (argc != 3)
+                return (0);
+        int     ret = ft_recursive_power(atoi(argv[1]), atoi(argv[2]));
+        printf("%d\n", ret);
+}
+
+//To test the code of ex04
+
+
+
+//To test the code of ex05
+
+int     main(void)
+{
+        printf("%d", ft_sqrt(2147483647));
+}
 
 //////////////////////////////////////////////////C06
 

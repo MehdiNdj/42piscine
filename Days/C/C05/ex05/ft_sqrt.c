@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 01:17:10 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/22 01:24:26 by mnedjar          ###   ########.fr       */
+/*   Created: 2022/07/27 00:32:07 by mnedjar           #+#    #+#             */
+/*   Updated: 2022/07/27 02:07:52 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write (1, &c, 1);
-}
-
-int	main(int argc, char **argv)
-{
-	int	i;
+	long	i;
 
 	i = 0;
-	while (argc && argv[0][i] != 0)
+	while (i * i <= nb)
 	{
-		ft_putchar(argv[0][i]);
+		if (i * i == nb)
+			return (i);
 		i++;
 	}
-	ft_putchar('\n');
 	return (0);
 }

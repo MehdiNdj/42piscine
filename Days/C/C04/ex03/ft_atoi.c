@@ -6,12 +6,9 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 20:32:55 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/26 01:30:34 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/26 22:38:28 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-#include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -23,10 +20,10 @@ int	ft_atoi(char *str)
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;
 	sign = 1;
-	while((str[i] == '-') || (str[i] == '+'))
+	while ((str[i] == '-') || (str[i] == '+'))
 	{
 		if (str[i] == '-')
-			sign *= - 1;
+			sign *= -1;
 		i++;
 	}
 	n = 0;
@@ -36,9 +33,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (n * sign);
-}
-
-int	main(void)
-{
-	printf("%d", ft_atoi(" ---+--+1234ab567"));
 }

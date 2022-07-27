@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 01:17:10 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/22 01:24:26 by mnedjar          ###   ########.fr       */
+/*   Created: 2022/07/26 21:23:34 by mnedjar           #+#    #+#             */
+/*   Updated: 2022/07/27 00:38:54 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int ft_fibonacci(int index)
 {
-	write (1, &c, 1);
-}
-
-int	main(int argc, char **argv)
-{
-	int	i;
-
-	i = 0;
-	while (argc && argv[0][i] != 0)
-	{
-		ft_putchar(argv[0][i]);
-		i++;
-	}
-	ft_putchar('\n');
-	return (0);
+	if (index < 0)
+		return (-1);
+	else if (index < 2)
+		return (index);
+	else
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }

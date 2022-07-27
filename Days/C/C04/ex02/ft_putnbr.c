@@ -6,13 +6,13 @@
 /*   By: mnedjar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 23:13:42 by mnedjar           #+#    #+#             */
-/*   Updated: 2022/07/21 23:47:24 by mnedjar          ###   ########.fr       */
+/*   Updated: 2022/07/26 23:32:13 by mnedjar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void 	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
